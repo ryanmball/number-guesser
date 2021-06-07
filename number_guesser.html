@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="numberGuesser.js" defer></script>
+  <title>Number Guesser</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Guess a number!</h1>
+    <div>
+      <input type="text" v-model="userGuess">
+      <button v-on:click="checkGuess()">Submit</button>
+      <button v-on:click="playAgain()">Play Again</button>
+    </div>
+    <h3>{{ message }}</h3>
+    <iframe v-if="winner" src="https://giphy.com/embed/o75ajIFH0QnQC3nCeD" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  </div>
+</body>
+</html>
